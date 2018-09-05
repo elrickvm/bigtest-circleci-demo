@@ -13,7 +13,7 @@ jobs:
           command: |
             ls
       - restore_cache:
-          key: v1-node-modules-{{ checksum "yarn.lock" }}
+          key: v1-node-modules-{{ checksum "/react/countdown/yarn.lock" }}
       - run:
           name: Install dependencies
           command: |
