@@ -7,10 +7,8 @@ jobs:
 
     working_directory: ~/project
 
-    stes:
+    steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           key: v1-node-modules-{{ checksum "yarn.lock" }}
       - run:
