@@ -31,11 +31,3 @@ jobs:
       - run:
           name: Build bundle
           command: NODE_ENV=production yarn build
-workflows:
-  version: 2
-  push:
-    jobs:
-      - checkout-and-install
-      - build:
-          requires:
-            - checkout-and-install
