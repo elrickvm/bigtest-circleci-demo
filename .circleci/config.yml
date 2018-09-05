@@ -1,15 +1,12 @@
 
 version: 2
 jobs:
-  build:
+  checkout-and-install:
     docker:
       - image: circleci/node:9
 
     steps:
       - checkout
-      - run:
-          command: |
-            ls
       - restore_cache:
           key: v1-node-modules-{{ checksum "yarn.lock" }}
       - run:
@@ -22,3 +19,12 @@ jobs:
 
       # run tests!
       # - run: yarn test
+  build:
+    docker:
+      - image: circleci/node:9
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Build bundle
+          command: NODE_ENV=production yarn build
