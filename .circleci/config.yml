@@ -14,8 +14,10 @@ jobs:
       - restore_cache:
           key: v1-node-modules-{{ checksum "yarn.lock" }}
       - run:
+          command: |
+            ls
+      - run:
           name: Install dependencies
-          command: ls
           command: yarn install
       - save_cache:
           paths:
