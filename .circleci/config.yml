@@ -15,9 +15,7 @@ jobs:
           key: v1-node-modules-{{ checksum "yarn.lock" }}
       - run:
           name: Install dependencies
-          command: |
-            ls
-            yarn install
+          command: yarn install
       - save_cache:
           paths:
             - ~/react/countdown/node_modules
