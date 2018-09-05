@@ -5,8 +5,6 @@ jobs:
     docker:
       - image: circleci/node:9
 
-    # working_directory: ~/react/countdown
-
     steps:
       - checkout
       - run:
@@ -21,7 +19,7 @@ jobs:
             yarn install
       - save_cache:
           paths:
-            - ~/react/countdown/node_modules
+            - ~/project/node_modules
           key: v1-node-modules-{{ checksum "yarn.lock" }}
 
       # run tests!
