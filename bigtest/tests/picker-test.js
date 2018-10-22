@@ -29,8 +29,8 @@ describe('Date Picker', () => {
       await form.year.next();
     });
 
-    it('displays a "get countdown" submit button', () => {
-      expect(form.submit.text).to.equal('Get Countdowns');
+    it.only('displays a "get countdown" submit button', () => {
+      expect(form.submit.text).to.equal('Get Countdown');
     });
   });
 
