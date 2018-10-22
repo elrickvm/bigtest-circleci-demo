@@ -12,3 +12,5 @@ export default @interactor class CountdownInteractor {
   direction = text('[data-test-countdown-direction]');
   target = text('[data-test-countdown-target]');
 }
+
+// Build test
