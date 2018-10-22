@@ -39,11 +39,7 @@ jobs:
           name: Run tests
           command:
             yarn test
-            --coverage
-            --karma.singleRun
-            --karma.browsers=Chrome
-            --karma.reporters mocha junit
-            --karma.junitReporter.outputDir artifacts/karma
+            --browser chrome
       - store_test_results:
           path: ./artifacts
       - store_artifacts:
