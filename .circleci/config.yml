@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Run tests
           command:
-            yarn testbi
+            yarn test
             --browser chrome
             --reporters mocha junit
             --once
