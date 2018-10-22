@@ -20,21 +20,41 @@ jobs:
             - ~/project/node_modules
           key: v1-node-modules-{{ checksum "yarn.lock" }}
 
-  build:
+  # build:
+  #   docker:
+  #     - image: circleci/node:9
+  #   steps:
+  #     - attach_workspace:
+  #         at: ~/
+  #     - run:
+  #         name: Build bundle
+  #         command: NODE_ENV=production yarn build
+  test-chrome:
     docker:
-      - image: circleci/node:9
+      - image: circleci/node:10-browsers
     steps:
       - attach_workspace:
           at: ~/
       - run:
-          name: Build bundle
-          command: NODE_ENV=production yarn build
+          name: Run tests
+          command:
+            yarn test
+            --coverage
+            --karma.singleRun
+            --karma.browsers=Chrome
+            --karma.reporters mocha junit
+            --karma.junitReporter.outputDir artifacts/karma
+      - store_test_results:
+          path: ./artifacts
+      - store_artifacts:
+          path: ./artifacts
+
 
 workflows:
   version: 2
   push:
     jobs:
       - checkout-and-install
-      - build:
+      - test-chrome:
           requires:
             - checkout-and-install
