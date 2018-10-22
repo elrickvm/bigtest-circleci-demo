@@ -40,6 +40,7 @@ jobs:
           command:
             yarn test
             --browser chrome
+            --once
       - store_test_results:
           path: ./artifacts
       - store_artifacts:
