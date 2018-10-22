@@ -5,7 +5,6 @@
   "description": "Count down or up to a date",
   "scripts": {
     "build": "webpack --config ./webpack.config.js --env.production",
-    "deploy": "surge ./dist https://bigtestjs-counter.surge.sh",
     "start": "webpack-serve --config ./webpack.config.js --development",
     "test": "karma start ./karma.config.js"
   },
