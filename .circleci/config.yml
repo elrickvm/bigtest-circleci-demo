@@ -40,7 +40,8 @@ jobs:
           command:
             yarn test
             --browser chrome
-            --reporter junit
+            --reporters mocha junit
+            --karma.junitReporter.outputDir artifacts/karma
             --once
       - store_test_results:
           path: ./artifacts
