@@ -30,7 +30,7 @@ describe('Date Picker', () => {
     });
 
     it('displays a "get countdown" submit button', () => {
-      expect(form.submit.text).to.equal('Get Countdown');
+      expect(form.submit.text).to.equal('Get Countdowns');
     });
   });
 
