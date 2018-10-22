@@ -3,7 +3,7 @@ import { travel } from 'timekeeper';
 import { expect } from 'chai';
 
 import { setupApplicationForTesting, visit, location } from '../helpers/setup-app';
-import CountdownInteractor from './interactors/countdown';
+import CountdownInteractor from '../interactors/countdown';
 
 describe('Countdown', () => {
   const countdown = new CountdownInteractor();
