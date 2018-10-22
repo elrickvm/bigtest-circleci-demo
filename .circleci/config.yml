@@ -41,7 +41,6 @@ jobs:
             yarn testbi
             --browser chrome
             --reporters mocha junit
-            --karma.junitReporter.outputDir artifacts/karma
             --once
       - store_test_results:
           path: ./artifacts
