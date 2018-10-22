@@ -40,6 +40,7 @@ jobs:
           command:
             yarn test
             --browser chrome
+            --reporter mocha
             --once
       - store_test_results:
           path: ./artifacts
