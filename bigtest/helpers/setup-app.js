@@ -1,11 +1,16 @@
+import { before, beforeEach } from '@bigtest/mocha';
 import { setupAppForTesting } from '@bigtest/react';
+import { freeze } from 'timekeeper';
+import App from '../src/app';
 
-// Import your applications root.
-// This is typically what you pass to `ReactDOM.render`
-// import App from '../../src/app.js';
+export { visit, location } from '@bigtest/react';
 
-export async function setupApplicationForTesting() {
-  await setupAppForTesting(App, {
-    mountId: 'bigtesting-container'
+export function setupApplicationForTesting() {
+  before(() => freeze(new Date([2018, 1, 1])));
+
+  beforeEach(async function() {
+    this.app = await setupAppForTesting(App, {
+      mountId: 'root'
+    });
   });
 }

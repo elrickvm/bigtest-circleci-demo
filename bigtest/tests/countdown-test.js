@@ -2,7 +2,7 @@ import { describe, beforeEach, it } from '@bigtest/mocha';
 import { travel } from 'timekeeper';
 import { expect } from 'chai';
 
-import { setupApplicationForTesting, visit, location } from './helpers';
+import { setupApplicationForTesting, visit, location } from '../helpers/setup-app';
 import CountdownInteractor from './interactors/countdown';
 
 describe('Countdown', () => {
