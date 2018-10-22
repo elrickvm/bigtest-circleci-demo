@@ -20,8 +20,6 @@ jobs:
             - ~/project/node_modules
           key: v1-node-modules-{{ checksum "yarn.lock" }}
 
-      # run tests!
-      # - run: yarn test
   build:
     docker:
       - image: circleci/node:9
