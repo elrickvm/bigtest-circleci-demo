@@ -34,8 +34,8 @@ jobs:
             --coverage
             --single-run
             --browsers Chrome
-            --reporters mocha-junit-reporter
-            --reporter-options mochaFile=./artifacts/karma.xml
+            --reporters mocha,junit
+            --reporter-options mochaFile=./artifacts/karma
       - store_test_results:
           path: ./artifacts
       - store_artifacts:
