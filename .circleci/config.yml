@@ -32,10 +32,10 @@ jobs:
           command:
             yarn test
             --coverage
-            --karma.singleRun
-            --karma.browsers=Chrome
-            --karma.reporters mocha junit
-            --karma.junitReporter.outputDir artifacts/karma
+            --single-run
+            --browsers Chrome
+            --reporters mocha-junit-reporter
+            --reporter-options mochaFile=./artifacts/karma
       - store_test_results:
           path: ./artifacts
       - store_artifacts:
