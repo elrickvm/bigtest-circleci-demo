@@ -31,7 +31,6 @@ jobs:
           name: Run tests
           command:
             yarn test
-            --coverage
             --single-run
             --browsers Chrome
             --reporters mocha,junit
