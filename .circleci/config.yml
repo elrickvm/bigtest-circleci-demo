@@ -34,7 +34,7 @@ jobs:
             --coverage
             --single-run
             --browsers Chrome
-            --reporters mocha-junit-reporter
+            --reporters mocha junit
       - store_test_results:
           path: ./artifacts
       - store_artifacts:
