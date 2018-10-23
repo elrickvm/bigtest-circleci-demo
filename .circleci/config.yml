@@ -13,7 +13,7 @@ jobs:
           name: Install dependencies
           command: yarn install
       - persist_to_workspace:
-          root: ~/
+          root: ~/react/countdown
           paths:
             - project
       - save_cache:
