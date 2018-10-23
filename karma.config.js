@@ -6,12 +6,12 @@ module.exports = (config) => {
 
     files: [
       // karma-webpack will watch our files
-      { pattern: 'tests/index.js', watched: false }
+      { pattern: 'bigtest/index.js', watched: false }
     ],
 
     preprocessors: {
       // tells Karma that we'll be using Webpack to process this file
-      'tests/index.js': ['webpack']
+      'bigtest/index.js': ['webpack']
     },
 
     // Mocha reporter options

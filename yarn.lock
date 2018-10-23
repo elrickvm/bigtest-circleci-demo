@@ -778,25 +778,21 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@bigtest/convergence@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@bigtest/convergence/-/convergence-0.5.0.tgz#1d84f05e8e88869358050dabc28cf883872c41ca"
+"@bigtest/convergence@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@bigtest/convergence/-/convergence-1.1.1.tgz#b314d8b1edc392d3e8780f99499a9a03aa528d54"
 
-"@bigtest/convergence@^0.9.1":
+"@bigtest/interactor@^0.9.1":
   version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@bigtest/convergence/-/convergence-0.9.1.tgz#ddbe3e85e757b8fb82b80df95ed2e574c9d24429"
-
-"@bigtest/interactor@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@bigtest/interactor/-/interactor-0.5.0.tgz#48b56c0706504d5c5652e1456302718522363120"
+  resolved "https://registry.yarnpkg.com/@bigtest/interactor/-/interactor-0.9.1.tgz#2cc9f6e962d6dc42503af08a1e6ba38ca2129347"
   dependencies:
-    "@bigtest/convergence" "^0.9.1"
+    "@bigtest/convergence" "^1.1.1"
 
-"@bigtest/mocha@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@bigtest/mocha/-/mocha-0.3.3.tgz#1a2e4545424f6e200af1c1720d8631fc1f36fda1"
+"@bigtest/mocha@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@bigtest/mocha/-/mocha-0.5.2.tgz#df54959636067448a1c0fd36d19ba1b1a491604f"
   dependencies:
-    "@bigtest/convergence" "^0.5.0"
+    "@bigtest/convergence" "^1.1.1"
 
 "@bigtest/react@^0.1.1":
   version "0.1.1"
